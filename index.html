@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="javascript/script.js" as="script" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="javascript/script.js" defer></script>
+
+    <link rel="canonical" href="https://www.ToDoList.com" />
+    <link rel="icon" href="immagini/todolist.avif" type="image/avif" />
+
+    <meta name="description" content="to-do-list" />
+    <meta name="keywords" content="todolist, to do list, ToDoList, To Do List" />
+    <meta name="author" content="Del Moro Gianpaolo" />
+    <meta name="copyright" content="Del Moro Gianpaolo" />
+
+    <meta name="geo.region" content="IT-PI" />
+    <meta name="geo.placename" content="San Frediano" />
+
+    <title>ToDoList</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ToDoList.com">
+    <meta property="og:title" content="ToDoList">
+    <meta property="og:description" content="to-do-list">
+    <meta property="og:image" content="immagini/todolist.avif">
+    <meta property="og:site_name" content="ToDoList">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.ToDoList.com">
+    <meta name="twitter:title" content="ToDoList">
+    <meta name="twitter:description" content="to-do-list">
+    <meta name="twitter:image" content="immagini/todolist.avif">
+    <meta name="twitter:site" content="@ToDoList">
+</head>
+
+<body>
+    <main>
+        <section aria-labelledby="titolo-section" class="container-input-date">
+            <h1></h1>
+            <div class="container-input">
+                <span id="required-field-input"></span>
+                <input type="text" name="activity" id="activity" autofocus placeholder="inserisci attività"
+                    title="non può essre vuoto o contenere solo spazi bianchi" />
+            </div>
+            <div class="container-date">
+                <span id="required-field-date"></span>
+                <input type="date" min="2026-02-13" max="3026-2-13" id="date"/>
+            </div>
+            <button id="button" title="premi per aggiungere attività"><span>aggiungi</span> <img
+                    src="immagini/immagine-bottone.png" alt="immagine pulsante aggiungi" title="premi per aggiungere"
+                    draggable="false" loading="eager" width="30" height="30" /></button>
+        </section>
+        <div class="container-table">
+            <table id="table"></table>
+        </div>
+    </main>
+</body>
+
+</html>
