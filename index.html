@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="robots" content="index, follow" />
 
-    <link rel="preload" href="css/style.css" as="style" />
-    <link rel="preload" href="javascript/script.js" as="script" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="javascript/script.js" defer></script>
+    <link rel="preload" href="assets/css/style.css" as="style" />
+    <link rel="preload" href="assets/javascript/script.js" as="script" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/javascript/script.js" defer></script>
 
     <link rel="canonical" href="https://www.ToDoList.com" />
-    <link rel="icon" href="immagini/todolist.avif" type="image/avif" />
+    <link rel="icon" href="assets/immagini/todolist.avif" type="image/avif" />
 
     <meta name="description" content="to-do-list" />
     <meta name="keywords" content="todolist, to do list, ToDoList, To Do List" />
@@ -29,7 +29,7 @@
     <meta property="og:url" content="https://www.ToDoList.com">
     <meta property="og:title" content="ToDoList">
     <meta property="og:description" content="to-do-list">
-    <meta property="og:image" content="immagini/todolist.avif">
+    <meta property="og:image" content="assets/immagini/todolist.avif">
     <meta property="og:site_name" content="ToDoList">
     <meta property="og:locale" content="it_IT">
 
@@ -37,14 +37,14 @@
     <meta name="twitter:url" content="https://www.ToDoList.com">
     <meta name="twitter:title" content="ToDoList">
     <meta name="twitter:description" content="to-do-list">
-    <meta name="twitter:image" content="immagini/todolist.avif">
+    <meta name="twitter:image" content="assets/immagini/todolist.avif">
     <meta name="twitter:site" content="@ToDoList">
 </head>
 
 <body>
     <main>
         <section aria-labelledby="titolo-section" class="container-input-date">
-            <h1></h1>
+            <h1 id="titolo-section">To-Do-List</h1>
             <div class="container-input">
                 <span id="required-field-input"></span>
                 <input type="text" name="activity" id="activity" autofocus placeholder="inserisci attività"
@@ -55,7 +55,7 @@
                 <input type="date" min="2026-02-13" max="3026-2-13" id="date"/>
             </div>
             <button id="button" title="premi per aggiungere attività"><span>aggiungi</span> <img
-                    src="immagini/immagine-bottone.png" alt="immagine pulsante aggiungi" title="premi per aggiungere"
+                    src="assets/immagini/immagine-bottone.png" alt="immagine pulsante aggiungi" title="premi per aggiungere"
                     draggable="false" loading="eager" width="30" height="30" /></button>
         </section>
         <div class="container-table">
