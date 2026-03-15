@@ -115,13 +115,21 @@
         preessKeyWord(){
             this.#activity.addEventListener('keydown', (event) => {
                 if (event.key === 'Enter') {
-                    this.#createRow();
+                    if(this.#date.value === ''){
+                        this.#date.focus();
+                    }else{
+                        this.#createRow();
+                    }
                 }
             });
 
             this.#date.addEventListener('keydown', (event) => {
                 if (event.key === 'Enter') {
-                    this.#createRow();
+                    if(this.#activity.value.trim() === ''){
+                        this.#activity.focus();
+                    }else{
+                        this.#createRow();
+                    }
                 }
             });
         }
