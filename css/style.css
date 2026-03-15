@@ -137,3 +137,32 @@ td button {
     background-color: #c82333;
     transform: scale(1.05);
 }
+
+.button-edit {
+    background-color: #3498db;
+}
+
+.button-edit:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.row-done {
+    border-left: 8px solid #28a745;
+    background-color: #f8fff9; 
+}
+
+.row-done td { 
+    text-decoration: line-through; 
+}
+
+#input-button {
+    width : 100px;
+    height : 20px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 15px;;
+    background-color: #fff;
+    outline: none;
+    text-align: left;
+}

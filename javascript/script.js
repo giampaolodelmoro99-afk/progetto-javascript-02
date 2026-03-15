@@ -23,32 +23,60 @@
             this.#requiredFieldDate = requiredFieldDate;
         }
 
-        #createButton(tr){
+        #createButton(tr, tdText){
             const tdDo = document.createElement('td');
             const tdDelte = document.createElement('td');
+            const tdEdit = document.createElement('td');
 
             const buttonDo = document.createElement('button');
             const buttonDelete = document.createElement('button');
+            const buttonEdit = document.createElement('button');
 
             buttonDo.classList.add('button-done');
             buttonDelete.classList.add('button-delete');
+            buttonEdit.classList.add('button-edit');
 
             buttonDo.textContent = 'fatto';
             buttonDelete.textContent = 'elimina';
+            buttonEdit.textContent = 'modifica';
 
             buttonDelete.addEventListener('click', () => tr.remove());
             buttonDo.addEventListener('click', () =>{
-                tr.style.backgroundColor = '#FF9900';
-            })
+                tr.classList.toggle('row-done');
+            });
+            buttonEdit.addEventListener('click', () =>{
+                const existingInput = tdText.querySelector('input');
 
+                if (!existingInput){
+                    const currentText = tdText.textContent;
+                    const input = document.createElement('input');
+
+                    input.type = 'text';
+                    input.value = currentText;
+                    input.id = 'input-button'
+
+                    tdText.textContent = '';
+                    tdText.appendChild(input);
+
+                    buttonEdit.textContent = 'salva';
+                }else{
+                    tdText.textContent = existingInput.value.trim();
+                    buttonEdit.textContent = 'modifica';
+                }
+            });
+
+
+            
             tdDo.appendChild(buttonDo);
             tdDelte.appendChild(buttonDelete);
+            tdEdit.appendChild(buttonEdit);
 
             tr.appendChild(tdDo);
             tr.appendChild(tdDelte);
+            tr.appendChild(tdEdit);
         }
 
-        createRow() {
+        #createRow() {
             this.#requiredFieldInput.textContent = '';
             this.#requiredFieldDate.textContent = '';
 
@@ -72,7 +100,7 @@
                 tr.appendChild(tdDate);
                 tr.appendChild(tdText);
 
-                this.#createButton(tr);
+                this.#createButton(tr, tdText);
                 this.#table.appendChild(tr);
 
         
@@ -82,7 +110,7 @@
 }
 
         press(){
-            this.#button.addEventListener('click', () => this.createRow());
+            this.#button.addEventListener('click', () => this.#createRow());
         }
 
     }
