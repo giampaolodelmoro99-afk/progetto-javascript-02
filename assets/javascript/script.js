@@ -109,10 +109,27 @@
     }
 }
 
-        press(){
+        pressButton(){
             this.#button.addEventListener('click', () => this.#createRow());
         }
+        preessKeyWord(){
+            this.#activity.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    this.#createRow();
+                }
+            });
 
+            this.#date.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    this.#createRow();
+                }
+            });
+        }
+
+        press(){
+            this.pressButton();
+            this.preessKeyWord();
+        }
     }
 
 
